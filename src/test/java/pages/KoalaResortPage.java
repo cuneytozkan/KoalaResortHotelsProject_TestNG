@@ -210,4 +210,10 @@ public class KoalaResortPage {
         loginButonu.click();
     }
 
+    @FindBy(xpath = "//input[@name='IDHotel']")
+    public WebElement IDHotelTextTable;
+
+    @FindBy(xpath = "//input[@name='Address']")
+    public WebElement adresTextTable;
+
 }
