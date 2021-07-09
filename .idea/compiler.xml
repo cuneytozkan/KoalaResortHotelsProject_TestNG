@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="team3KoalaResortHotelsProject" />
         <module name="KoalaResortHotelsProject_TestNG-master" />
+        <module name="KoalaResortHotelsProject_TestNG" />
         <module name="KoalaResortHotelsProjectTestNG" />
       </profile>
     </annotationProcessing>
