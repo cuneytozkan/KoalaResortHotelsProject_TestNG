@@ -16,7 +16,7 @@ public class TC_001_HotelRoomEklemeNegatif extends TestBaseRapor {
 
     @Test
     public void hotelRoomAddNegativIdHotel(){
-
+        //
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
 
         koalaResortPage.ilkLoginLink.click();
