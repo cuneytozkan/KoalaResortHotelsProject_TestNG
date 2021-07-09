@@ -66,6 +66,7 @@ public class OtelOlusturmaPositiveTest {
         koalaResortPage.sonOKButonu.click();
 
         Driver.closeDriver();
+        //test pass
 
 
     }
