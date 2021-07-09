@@ -12,10 +12,11 @@ import utilities.TestBaseRapor;
 
 public class TC_002_HotelRoomEklemeNegatif extends TestBaseRapor {
 
-    KoalaResortPage koalaResortPage=new KoalaResortPage();
 
     @Test
     public void hotelRoomAddNegativPriceTextBox(){
+
+        KoalaResortPage koalaResortPage=new KoalaResortPage();
 
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
 
@@ -45,7 +46,7 @@ public class TC_002_HotelRoomEklemeNegatif extends TestBaseRapor {
                 sendKeys(ConfigReader.getProperty("kr_room_add_negativ_description")).perform();
 
         Select select2=new Select(koalaResortPage.roomTypeDropdown);
-        select.selectByVisibleText(ConfigReader.getProperty("kr_room_add_negativ_roomType"));
+        select2.selectByVisibleText(ConfigReader.getProperty("kr_room_add_negativ_roomType"));
 
         actions.contextClick(koalaResortPage.maxAdult).
                 sendKeys(ConfigReader.getProperty("kr_room_add_negativ_maxAdult")).
@@ -58,6 +59,12 @@ public class TC_002_HotelRoomEklemeNegatif extends TestBaseRapor {
         koalaResortPage.roomAddSaveButton.click();
 
         Assert.assertTrue(koalaResortPage.roomAddSaveButton.isEnabled());
+
+        koalaResortPage.logoutDropdown.click();
+        koalaResortPage.logoutDropdown.click();
+        koalaResortPage.logoutDropdownSelect.click();
+
+        Driver.closeDriver();
 
     }
 }

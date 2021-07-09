@@ -12,11 +12,12 @@ import utilities.TestBaseRapor;
 
 public class TC_001_HotelRoomEklemeNegatif extends TestBaseRapor {
 
-    KoalaResortPage koalaResortPage=new KoalaResortPage();
 
     @Test
     public void hotelRoomAddNegativIdHotel(){
-        //
+
+        KoalaResortPage koalaResortPage=new KoalaResortPage();
+
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
 
         koalaResortPage.ilkLoginLink.click();
@@ -57,9 +58,7 @@ public class TC_001_HotelRoomEklemeNegatif extends TestBaseRapor {
 
         Assert.assertTrue(koalaResortPage.roomAddSaveButton.isEnabled());
 
-
-
+        Driver.closeDriver();
 
     }
-
 }
