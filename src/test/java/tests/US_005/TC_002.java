@@ -1,18 +1,17 @@
-package smokeTest;
-
+package tests.US_005;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.KoalaResortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class US_005_TC_006 {
-
-
+public class TC_002 extends TestBaseRapor {
+    KoalaResortPage koalaResortPage = new KoalaResortPage();
 
     @Test
-    public void emailIleArama() throws InterruptedException {
-        KoalaResortPage koalaResortPage=new KoalaResortPage();
+    public void codeAramaKutusu() throws InterruptedException{
+
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
         koalaResortPage.ilkLoginLink.click();
 
@@ -21,19 +20,16 @@ public class US_005_TC_006 {
         koalaResortPage.passwordTextBox.sendKeys(ConfigReader.getProperty("kr_valid_password"));
 
         koalaResortPage.loginButonu.click();
-
         koalaResortPage.hotelManagement.click();
 
         koalaResortPage.hotelList.click();
 
-        koalaResortPage.emailTextTable.sendKeys(ConfigReader.getProperty("kr_emailText"));
-
+        koalaResortPage.codeTextTable.sendKeys(ConfigReader.getProperty("kr_CodeText"));
         koalaResortPage.hotelListSearchBtn.click();
 
         Thread.sleep(5000);
-
         Assert.assertEquals(koalaResortPage.nameHotelKontrol.getText(),ConfigReader.getProperty("kr_customer_name"));
 
-        Driver.closeDriver();
+
     }
 }

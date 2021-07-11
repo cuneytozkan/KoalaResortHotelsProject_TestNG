@@ -8,11 +8,11 @@ import utilities.Driver;
 
 public class US_005_TC_007 {
 
-    KoalaResortPage koalaResortPage=new KoalaResortPage();
+
 
     @Test
     public void birdenFazlaDataileArama() throws InterruptedException {
-
+        KoalaResortPage koalaResortPage=new KoalaResortPage();
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
         koalaResortPage.ilkLoginLink.click();
 
@@ -37,5 +37,6 @@ public class US_005_TC_007 {
 
         Assert.assertEquals(koalaResortPage.nameHotelKontrol.getText(),ConfigReader.getProperty("kr_customer_name"));
 
+        Driver.closeDriver();
     }
 }

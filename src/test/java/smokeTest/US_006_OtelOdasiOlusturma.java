@@ -11,10 +11,11 @@ import utilities.TestBaseRapor;
 
 public class US_006_OtelOdasiOlusturma extends TestBaseRapor{
 
-    KoalaResortPage koalaResortPage=new KoalaResortPage();
+
 
     @Test
     public void otelOdasiOlusturma() throws InterruptedException {
+        KoalaResortPage koalaResortPage=new KoalaResortPage();
         extentTest=extentReports.createTest("US_006","Otel odasi olusturma");
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
         extentTest.info("Koala Resort Hotel sayfasina giris yapildi");
@@ -63,6 +64,7 @@ public class US_006_OtelOdasiOlusturma extends TestBaseRapor{
         koalaResortPage.sonOKButonu.click();
         extentTest.info("'HotelRoom was inserted successfully' yazısı görüldü ve başarıyla oluşturuldu");
 
+        Driver.closeDriver();
     }
 
 }

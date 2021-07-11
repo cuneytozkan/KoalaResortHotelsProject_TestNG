@@ -10,7 +10,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class OtelOlusturmaPositiveTest {
-    KoalaResortPage koalaResortPage = new KoalaResortPage();
+
     /*
     koalaresorthotels sitesine girin
     Sag ustteki Login butonuna tiklayin
@@ -31,6 +31,7 @@ public class OtelOlusturmaPositiveTest {
      */
     @Test
     public void test01() throws InterruptedException {
+        KoalaResortPage koalaResortPage = new KoalaResortPage();
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
         koalaResortPage.ilkLoginLink.click();
         koalaResortPage.kullaniciAdi.sendKeys(ConfigReader.getProperty("kr_valid_username"));

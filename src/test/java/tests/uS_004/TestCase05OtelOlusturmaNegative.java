@@ -41,6 +41,8 @@ public class TestCase05OtelOlusturmaNegative extends TestBaseRapor {
 
         Assert.assertTrue(koalaResortPage.selectGroupHataMesaji.isDisplayed());
 
+        Driver.closeDriver();
+
 
 
     }
