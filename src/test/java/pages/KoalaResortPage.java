@@ -216,4 +216,45 @@ public class KoalaResortPage {
     @FindBy(xpath = "//input[@name='Address']")
     public WebElement adresTextTable;
 
+    @FindBy(xpath = "(//i[@class='icon-calendar'])[4]")
+    public WebElement roomReservationUpdate;
+
+    @FindBy(xpath = "(//*[@class='sorting_1'])[10]")
+    public WebElement ahmetReservationHotelRoom;
+
+    @FindBy(className = "sorting_1")
+    public WebElement ahmetReservationHotelRoom1;
+
+    @FindBy(xpath = "(//*[text()=' Details'])[10]")
+    public WebElement ahmetRoomReservationDetails;
+
+    @FindBy(id = "IDHotelRoom")
+    public WebElement reservationRoomChangeHotelRoom;
+
+    @FindBy(xpath = "(//*[text()='Save'])[1]")
+    public WebElement reservationUpdateSave;
+
+    @FindBy(id = "ContactPhone")
+    public WebElement reservationRoomContactPhone;
+
+    @FindBy(xpath = "//td[text()='(999) 999-9999']")
+    public WebElement reservationUpdateActualContactPhone;
+
+    @FindBy(id = "DateEnd")
+    public WebElement reservationUpdateDateEnd;
+
+    @FindBy(xpath = "(//*[@class='day'])[10]")
+    public WebElement reservationUpdateDay;
+
+    @FindBy(xpath = "//td[text()='10.07.2021']")
+    public WebElement reservationUpdateActualDateEnd;
+
+    @FindBy(id = "btnDelete")
+    public WebElement reservationUpdateDelete;
+
+    @FindBy(xpath = "//*[text()='1226']")
+    public WebElement reservationDeleteActual;
+
+
+
 }
